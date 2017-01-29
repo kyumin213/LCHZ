@@ -1,0 +1,54 @@
+body{
+		background: #f2f2f2;
+}
+.help_container{
+	width: 1102px;
+	margin: 20px auto;
+	border: 1px solid #e6e6e6;
+	
+}
+.help_container #left_help{
+	width:200px;
+    background:rgba(204,204,204,0.3);
+	float: left;
+		
+}
+
+.help_container #left_help ul li{
+	font-size: 14px;
+	height: 48px;
+	line-height: 48px;
+	border-bottom: 1px solid #ccc;
+	padding-left: 25px;
+	cursor: pointer;
+	color: rgba(0,0,0,0.6);
+	}
+.help_container #left_help ul li.hover{
+	color: #ea544a;
+	background-color: #fff;
+	}
+.help_container #right_help{
+	width: 800px;
+	min-height: 600px;
+	background-color: #FFFFFF;
+	float: left;	
+	font-size: 14px;
+	border-left: 1px solid #ccc;
+    color: rgba(0,0,0,0.6);
+    padding: 15px 50px 50px;
+    }
+.help_container #right_help h4{
+	line-height: 50px;
+	border-bottom: 1px dashed #ccc;
+    font-weight: 700;
+	color: rgba(0,0,0,0.7);
+	cursor: pointer;
+	}
+.help_container #right_help p{
+	padding: 12px 0 15px;
+	line-height: 25px;
+	}
+.help_container #right_help h4:first-child{
+	padding-top: 0;
+	}
+.help_container #right_help div{display: none;}
