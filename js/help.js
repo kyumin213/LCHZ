@@ -30,7 +30,7 @@ window.onload=function(){
           }else{
           	left.style.height=right.offsetHeight+"px";
           }
-  	}K
+  	}
 
 
 

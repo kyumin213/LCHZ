@@ -1,7 +1,3 @@
-body{
-	background: #CCCCCC;
-}
-
 dd{
 	font-size: 14px;
 }
@@ -14,12 +10,12 @@ h3{
 	background: #D43F3A;
 	float: left;
 	margin-top: -6px;
+	min-width: 1100px;
 
 }
 
 .jxl_container .left_jxl{
 	float: left;
-	margin-left: 80px;
 }
 .jxl_container .left_jxl .yuan4{
 	width: 300px;
@@ -29,10 +25,10 @@ h3{
     margin:14px;
     text-align: center;
     color: #fff;
-    
+
 }
 .jxl_container .left_jxl .yuan4 ul li{
-	
+
 	margin-top: 40px;
 	display: inline-block;
 	font-size: 22px;
@@ -40,7 +36,7 @@ h3{
 	height: 25px;
 	line-height: 25px;
 	padding-left: 15px;
-	
+
 }
 .jxl_container .left_jxl .yuan4 ul li:first-child{
 	padding-right: 17px;
@@ -96,7 +92,6 @@ h3{
 	border: 1px solid rgba(255,255,255,0.3);
 	float: left;
 	margin-top: 50px;
-	margin-left: 50px;
 }
 
 .jxl_container .right_jxl{
@@ -105,8 +100,8 @@ h3{
 	background: #fff;
 	border-radius: 10px;
 	float: right;
-	margin: 50px 120px 50px 0;
-	
+	margin: 50px 0 50px 0;
+
 }
 .jxl_container .right_jxl .tz_money{
 	width: 343px;
@@ -115,7 +110,7 @@ h3{
 	position:relative;
 }
 .right_jxl .tz_money p{
-	
+
 	font-size: 15px;
 	float: left;
 	line-height: 40px;
@@ -130,7 +125,7 @@ h3{
 	float: left;
     padding-left:6px;
     outline: none;
-	
+
 }
 .right_jxl .tz_money a{
 	position: absolute;
@@ -174,15 +169,17 @@ h3{
 .right_jxl .item li:last-child{
 	margin-right: 4px;
 }
+.month{height: 230px;overflow: hidden;}
 .right_jxl .list_jxlsy h2{
 	font-size: 17px;
 	margin-left: 50px;
 	color:rgba(0,0,0,0.6);
 	margin-top: 15px;
 }
+.list_jxlsy{height: 230px;}
 .right_jxl .list_jxlsy #item_result{
 	width: 340px;
-	height: 50px;
+	height: 70px;
 }
 .right_jxl .list_jxlsy h2 font{
 	font-size: 14px;
@@ -199,7 +196,7 @@ h3{
 	-moz-border-radius:5px;
 	-ms-border-radius:5px;
 	background: #fff;
-	margin: 60px 125px 10px 125px;
+	margin: 10px 125px 10px 125px;
 	float: left;
 	font-size: 18px;
 	color: #F0AD4E;
@@ -223,11 +220,7 @@ h3{
 	height: 119px;
 	background: #fff;
 	border-bottom: 1px solid rgba(0,0,0,0.1);
-}
-
-
-.conf-data .conf_top ul{
-	margin-left: 120px;
+	min-width: 1100px;
 }
 .conf-data .conf_top li{
 	float: left;
@@ -243,7 +236,7 @@ h3{
 .conf-data .conf_top li p.p1{
 	font-size: 24px;
 	color: #333333;
-	
+
 }
 .conf-data .conf_top li p.font_16{
 	font-size: 16px;
@@ -257,7 +250,7 @@ h3{
 	overflow: hidden;
 }
 .conf_bottom ul{
-	
+
 }
 .conf_bottom li{
 	height: 65px;
@@ -270,6 +263,7 @@ h3{
 	height: 325px;
 	background: #fff;
 	margin: 50px auto;
+	min-width: 1100px;
 }
 .youshi dl{
 	width: 33.2%;
@@ -298,24 +292,27 @@ h3{
 	color: #78848e;
 	line-height: 26px;
 }
+.youshi i{
+	filter: alpha(opacity=80);
+	opacity: 0.8;
+}
 .youshi dl dt .tb1{
 	background: url(../img/ysdc.png) no-repeat center;
-	opacity: 0.8;
 }
 .youshi dl dt .tb2{
 	background: url(../img/yszn.png) no-repeat center;
-	opacity: 0.8;
 }
 .youshi dl dt .tb3{
 	background: url(../img/ysaq.png) no-repeat center;
-	opacity: 0.8;
 }
 .youshi dl dt i:hover{
+	filter: alpha(opacity=100);
 	opacity: 1;
 }
 .pro_menu{
    background-color:#78849E;
    height: 77px;
+   min-width: 1100px;
 
 }
 .pro_menu ul{
@@ -330,7 +327,7 @@ h3{
 	line-height: 55px;
 	color: #fff;
 	cursor:pointer;
-	
+
 }
 .pro_menu ul li.selected{
 		background: #fff;
@@ -339,7 +336,8 @@ h3{
 .product{
 	padding-bottom: 60px;
 	background: #fff;
-	
+	min-width: 1100px;
+
 }
 
 .pro_detail{
@@ -349,7 +347,7 @@ h3{
 	margin: 0 auto;
 
 
-	
+
 }
 .pro_detail table th,
 .pro_detail table td{

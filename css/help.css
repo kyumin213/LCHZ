@@ -1,6 +1,3 @@
-body{
-		background: #f2f2f2;
-}
 .help_container{
 	width: 1102px;
 	margin: 20px auto;
@@ -10,7 +7,7 @@ body{
 #left_help{
 	float: left;
 	width:200px;
-    background:rgba(204,204,204,0.3);
+    background:rgba(255,255,255,0.4);
 }
 
 #left_help ul li{

@@ -4,7 +4,7 @@ function scroll(){
 	})
 }
 
-    	
+
 
 
  $(function(){
@@ -18,7 +18,7 @@ function scroll(){
         },function(){
         	$('.apps').css("display","none");
         });
-        
+
         //单行消息滚动显示
         var inte=setInterval("scroll()",2000);
         $("#left-news").hover(function(){
@@ -27,15 +27,15 @@ function scroll(){
         function(){
         	inte=setInterval("scroll()",2000);
         });
-        
+
         //底部展开
         var xs=$(".show-link");
         var zk=$(".zk");
         $(".zk").click(function(){
         	xs.slideToggle();
         });
-        
-      
+
+
 
       //鼠标下拉导航置顶展示
         var nav=$(".nav");
@@ -43,18 +43,18 @@ function scroll(){
         var sc=$(document);
         var aa=$('nav ul a');
         win.scroll(function(){
-        	if(sc.scrollTop()>=40){       		
+        	if(sc.scrollTop()>=40){
         		nav.addClass("fixednav");
         		aa.addClass("nav-gd");
-        		$('.navTmp').fadeIn();       		
-        	    
+        		$('.navTmp').fadeIn();
+
         	}else{
         		nav.removeClass("fixednav");
         		aa.removeClass("nav-gd");
         		$('.navTmp').fadeOut();
         	}
         });
-      
+
       //返回顶部
         var back=$(".back-to-top");
         back.click(function(){
@@ -65,12 +65,34 @@ function scroll(){
         		$('html').animate({scrollTop:0},800);
         		return false;
         	}
-        	
         		$('body').animate({scrollTop:0},800);
         		return false;
-        	
         });
-        
+        //监听window的scroll事件
+        $(window).on('scroll',function(){
+            if($(window).scrollTop()>$(window).height()){
+                back.fadeIn();
+            }else{
+                back.fadeOut();
+            }
+        });
+        $(window).trigger('scroll');
+
+        //大咖说理查看更多
+        var $getmore=$('.dk div.bigcast:gt(3)');
+        $getmore.hide();
+        var $toggleBtn=$('.view-middle>span');
+        $toggleBtn.click(function(){
+            if($getmore.is(':visible')){
+                  $getmore.hide(500);
+                $(this).text("查看更多");
+            }else{
+               $getmore.show(500);
+                $(this).text("收起");
+            }
+            return false;
+        });
+
         //首页图片轮播展示
         var continer=$("#banner");
         var lits=$("#banner_list");
@@ -81,7 +103,7 @@ function scroll(){
         var len=3;
         var interval=2000;
         var timer;
-        
+
         function animate(offset){
         	var left=parseInt(lits.css('left'))+offset;
         	if(offset>0){
@@ -97,22 +119,22 @@ function scroll(){
         		}
         	});
         }
-        
+
         function showButton(){
         	btn.eq(index-1).addClass('on').siblings().removeClass('on');
         }
-        
+
         function play(){
         	timer=setTimeout(function(){
         		next.trigger('click');
         		play();
         	},interval);
         }
-        
+
         function stop(){
         	clearTimeout(timer);
         }
-        
+
         next.bind('click',function(){
         	if(lits.is(':animated')){
         		return;
@@ -124,7 +146,7 @@ function scroll(){
         	animate(-1500);
         	showButton();
         });
-        
+
         prev.bind('click',function(){
         	if(lits.is(':animated')){
         		return;
@@ -136,7 +158,7 @@ function scroll(){
         	animate(1500);
         	showButton();
         });
-        
+
         btn.each(function(){
         	$(this).bind('mouseover',function(){
         		if(lits.is(':animated') || $(this).attr('class')=='on'){
@@ -149,17 +171,17 @@ function scroll(){
         		showButton();
         	})
         });
-        
+
         continer.hover(stop,play);
         play();
-       
-   });
-   
-   
-   
 
-    	
-    	
+   });
+
+
+
+
+
+
 	/*var box=document.getElementById("banner");
 	var lis=document.getElementById("banner_list");
 	var btn=document.getElementById("banner_posint").getElementsByTagName("li");
@@ -170,7 +192,7 @@ function scroll(){
 	var index=1;
 	var len=3;
 	var animated=false;
-	
+
 	function animate(offset){
 		if(offset==0){
 			return;
@@ -180,7 +202,7 @@ function scroll(){
 		var interval=10;
 		var speed=offset/(time/interval);
 		var left=parseInt(lis.style.left)+offset;
-		
+
 		var go=function(){
 			if((speed > 0 && parseInt(lis.style.left) <left)  || (speed<0 && parseInt(lis.style.left)>left)){
 				lis.style.left=parseInt(lis.style.left)+speed+'px';
@@ -197,7 +219,7 @@ function scroll(){
 		}
 		go();
 	}
-	
+
 	function showBtn(){
 		for(var i=0;i<btn.length;i++){
 			if(btn[i].className=='on'){
@@ -207,18 +229,18 @@ function scroll(){
 		}
 		btn[index-1].className='on';
 	}
-	
+
 	function play(){
 		timer=setTimeout(function(){
 			next.onclick();
 			play();
 		},interval);
 	}
-	
+
 	function stop(){
 		clearTimeout(timer);
 	}
-	
+
 	next.onclick=function(){
 		if(animated){
 			return;
@@ -230,7 +252,7 @@ function scroll(){
 		animate(-1500);
 		showBtn();
 	}
-	
+
 	prev.onclick=function(){
 		if(animated){
 			return;
@@ -242,7 +264,7 @@ function scroll(){
 		animate(1500);
 		showBtn();
 	}
-	
+
 	for(var i=0;i<btn.length;i++){
 		btn[i].onmouseover=function(){
 			if(animated){
@@ -250,7 +272,7 @@ function scroll(){
 			}if(this.className=='on'){
 				return;
 			}
-			
+
 			var myIndex=parseInt(this.getAttribute('index'));
 			var offset=-1500*(myIndex-index);
 			animate(offset);
@@ -258,7 +280,7 @@ function scroll(){
 			showBtn();
 		}
 	}
-	
+
 	box.onmouseover=stop;
 	box.onmouseout=play;
 	play();
