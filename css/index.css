@@ -952,21 +952,22 @@ footer .foot-buttom .buttom ul li.ba a{
 .header{
 	width:100%;
 	height: 80px;
+	background: #fff;
 }
 .header img{
-	margin: 20px 30px 20px 120px;
 	float: left;
+	margin: 15px 0;
 }
 .header h2{
 	float: left;
 	line-height: 80px;
 	font-size: 24px;
 	font-weight: normal;
+	margin-left: 20px;
 	color: rgba(0,0,0,0.6);
 }
 .header a{
 	float: right;
-	margin-right: 100px;
 	text-decoration: none;
 	line-height: 80px;
 	font-size: 14px;
@@ -974,13 +975,10 @@ footer .foot-buttom .buttom ul li.ba a{
 .container{
 	width: 100%;
 	height: 650px;
-	background: rgba(238,238,238,0.8);
-}
-.container .container_left{
-	width: 60%;
+	background: #f2f2f2;
 }
 .container .container_left img{
-	margin: 150px 50px 150px 200px;
+	margin: 150px 50px 150px 50px;
 	float: left;
 }
 .container .container_right{
@@ -988,26 +986,26 @@ footer .foot-buttom .buttom ul li.ba a{
 	height: 400px;
 	background: #fff;
     float: left;
-    margin: 125px 70px 120px;
+    margin: 125px 10px 125px 80px;
 }
-.container .container_right h4{
+.container .container_right h2{
 	margin-top: 50px;
 	margin-bottom: 20px;
 }
-.container .container_right h4 span{
+.container .container_right h2 span{
 	font-size: 18px;
 	color: rgba(255,51,51,0.9);
 	font-weight: 800;
 	margin-left: 20px;
 }
-.container .container_right h4 a{
+.container .container_right h2 a{
 	float: right;
 	margin-right: 20px;
 	font-size: 14px;
 	font-weight: normal;
 	color: rgba(255,51,51,0.9);
 }
-.container .container_right h4 a font{
+.container .container_right h2 a font{
 	color: #000;
 }
 .container .container_right input{
@@ -1050,17 +1048,19 @@ footer .foot-buttom .buttom ul li.ba a{
 }
 .footer{
 	width: 100%;
-	height: 105px;
+	height: 150px;
 	text-align: center;
 	font-size: 14px;
 	color: rgba(0,0,0,0.8);
+	background: #fff;
 }
 .footer p:last-child{
-	margin-top: 10px;
+	padding-top: 10px;
+	padding-bottom: 20px;
 }
 .footer p:first-child{
-	margin-bottom: 25px;
-	margin-top: 50px;
+	padding-bottom: 20px;
+	padding-top: 45px;
 }
 .footer p:first-child a{
 	text-decoration: none;
