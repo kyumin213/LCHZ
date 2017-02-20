@@ -6,41 +6,44 @@
 		<meta http-equiv="Pragma" content="no-cache" />
 		<meta http-equiv="Cache-Control" content="no-cache" />
 		<meta http-equiv="expires" content="0" />
-		<meta  name="viewport" content="width=device-width,initial-cale=1,maximum=1"/>
+		<meta  name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"/>
 		<title>理财盒子--优越理财网专业的理财专家</title>
 		<link rel="stylesheet" href="css/index.css" />
 	</head>
 	<body>
-		<div class="header">
-			<img src="img/logo.png" alt="" />
-			<h2>欢迎来到理财盒子</h2>
-			<a href="index.html">返回首页</a>
+		<div class="header min-w">
+			<div class="webs">
+				<img src="img/logo.png" alt="" />
+				<h2>欢迎来到理财盒子</h2>
+				<a href="index.html">返回首页</a>
+			</div>
 		</div>
 		<div class="clearfix"></div>
 		<div class="container">
-			<div class="container_left">
-				<img src="img/registerpic.png"/>
-			</div>
-			<div class="container_right">
-				<h4>
-					<span>注册</span>
-					<a href="#"><font>有账号，</font>立即登录</a>
-				</h4>
-				<div class="tele">
-					<input type="text" placeholder="请输入11位手机号码" name="phoneNumber" id="txt-phonenumber" maxlength="11" ver-type="mibble" ver-err="请输入正确的手机号" autocomplete="off" />
+			<div class="webs">
+				<div class="container_left">
+					<img src="img/registerpic.png"/>
 				</div>
-				<div class="yzm">
-					<input type="text" placeholder="请输入图形验证码" name="vcode" maxlength="4" ver-type="vcode" ver-err="图形验证码格式错误" />
-					<img src="" class="yz_img" alt="看不清，点击更换" title="看不清，点击更换" />
+				<div class="container_right" id="form_send">
+					<h2>
+						<span>注册</span>
+						<a href="#"><font>有账号，</font>立即登录</a>
+					</h2>
+					<div class="tele">
+						<input type="text" placeholder="请输入11位手机号码" name="phoneNumber" id="txt-phonenumber" maxlength="11" ver-type="mobile" ver-err="请输入正确的手机号" autocomplete="off" />
+					</div>
+					<div class="yzm">
+						<input type="text" placeholder="请输入图形验证码" name="vcode" maxlength="4" ver-type="vcode" ver-err="图形验证码格式错误" id="inputverification" />
+						<img src="" class="yz_img" id="verification" alt="看不清，点击更换" title="看不清，点击更换" />
+					</div>
+					<div class="next_btn">
+						<input class="btn_next" type="submit" var-type="form_send" value="下一步" />
+						<p>注册代表您阅读并同意《理财盒子注册协议》</p>
+					</div>
 				</div>
-				<div class="next_btn">
-					<input class="btn_next" type="button" value="下一步" />
-					<p>注册代表您阅读并同意《理财盒子注册协议》</p>
-				</div>
-				
 			</div>
 		</div>
-		<div class="footer">
+		<div class="footer min-w">
 			<p>
 				<a href="">首页</a>|
 				<a href="">有零钱</a>|
